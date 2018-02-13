@@ -42,10 +42,27 @@ class MyViewModelController : ViewModelController() {
 
 This library depends on Architecture Components and Conductor.
 
-Those two components are NOT provided and need to be added to your project
+Those two components **are NOT provided** and need to be added to your project
 separately.
 
-**TODO Jitpack instructions**
+Add it in your root build.gradle at the end of repositories:
+
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+Step 2. Add the dependency
+
+```
+dependencies {
+    compile 'com.github.miquelbeltran:conductor-viewmodel:1.0.0'
+}
+```
 
 ## License
 
