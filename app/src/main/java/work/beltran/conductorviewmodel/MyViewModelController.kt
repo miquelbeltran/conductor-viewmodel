@@ -2,6 +2,7 @@ package work.beltran.conductorviewmodel
 
 import android.annotation.SuppressLint
 import android.arch.lifecycle.Observer
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +17,7 @@ class MyViewModelController : ViewModelController() {
         val viewModel = viewModelProvider().get(MyViewModel::class.java)
 
         // LiveData has no observers even after a configuration change
-        assert(!viewModel.getLiveData().hasObservers())
+        Log.d(TAG, "hasObservers should be false: ${viewModel.getLiveData().hasObservers()}")
 
         viewModel.getLiveData().observe(this, Observer<String> {
             this.view?.run {
