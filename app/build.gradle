@@ -32,7 +32,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
 
     implementation "com.bluelinelabs:conductor:$conductor_version"
-    compile project(path: ':conductor-viewmodel')
+    implementation project(path: ':conductor-viewmodel')
 
     implementation "android.arch.lifecycle:extensions:$arch_version"
 }
