@@ -30,4 +30,6 @@ dependencies {
 
     implementation "com.bluelinelabs:conductor:$conductor_version"
     implementation "android.arch.lifecycle:extensions:$arch_version"
+
+
 }
