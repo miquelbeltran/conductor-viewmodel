@@ -3,6 +3,8 @@
 This library adds support for the ViewModel from Architecture Components
 to the Conductor library.
 
+[![Release](https://jitpack.io/v/miquelbeltran/conductor-viewmodel.svg)](https://jitpack.io/#miquelbeltran/conductor-viewmodel)
+
 ## How it works
 
 A ViewModelController is provided that contains all the necessary things to
@@ -60,7 +62,7 @@ Step 2. Add the dependency
 
 ```
 dependencies {
-    compile 'com.github.miquelbeltran:conductor-viewmodel:1.0.0'
+    compile 'com.github.miquelbeltran:conductor-viewmodel:1.0.1'
 }
 ```
 
