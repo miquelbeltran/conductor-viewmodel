@@ -62,7 +62,7 @@ Step 2. Add the dependency
 
 ```
 dependencies {
-    implementation "com.github.miquelbeltran:conductor-viewmodel:1.0.1"
+    implementation "com.github.miquelbeltran:conductor-viewmodel:1.0.2"
 }
 ```
 
