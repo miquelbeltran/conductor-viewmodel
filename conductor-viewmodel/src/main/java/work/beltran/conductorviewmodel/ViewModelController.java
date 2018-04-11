@@ -22,11 +22,11 @@ public abstract class ViewModelController extends Controller implements Lifecycl
         super(bundle);
     }
 
-    protected ViewModelProvider viewModelProvider() {
+    public ViewModelProvider viewModelProvider() {
         return viewModelProvider(new ViewModelProvider.AndroidViewModelFactory(getActivity().getApplication()));
     }
 
-    protected ViewModelProvider viewModelProvider(ViewModelProvider.NewInstanceFactory factory) {
+    public ViewModelProvider viewModelProvider(ViewModelProvider.NewInstanceFactory factory) {
         return new ViewModelProvider(viewModelStore, factory);
     }
 
