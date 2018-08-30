@@ -1,7 +1,7 @@
 # ViewModel support for Conductor
 
 This library adds support for the ViewModel from Architecture Components
-to the Conductor library.
+to the [Conductor library](https://github.com/bluelinelabs/Conductor).
 
 [![Release](https://jitpack.io/v/miquelbeltran/conductor-viewmodel.svg)](https://jitpack.io/#miquelbeltran/conductor-viewmodel)
 
@@ -95,9 +95,9 @@ In order to remove the observers from the LiveData when the view is destroyed.
 
 ## License
 
-Conductor is a library by BlueLine Labs, Inc.
+`Conductor` is a library by BlueLine Labs, Inc. https://github.com/bluelinelabs/Conductor
 
-Conductor ViewModel is a library by Miquel Beltran
+`Conductor ViewModel` is a library by Miquel Beltran
 
 ```
 Copyright 2018 Miquel Beltran - BELTRAN.WORK
