@@ -12,7 +12,8 @@ import com.bluelinelabs.conductor.Controller;
 public abstract class ViewModelController extends Controller implements LifecycleOwner {
 
     private final ViewModelStore viewModelStore = new ViewModelStore();
-    private final ControllerLifecycleOwner lifecycleOwner = new  ControllerLifecycleOwner(this);
+
+    private final ControllerLifecycleOwner lifecycleOwner = new ControllerLifecycleOwner(this);
 
     public ViewModelController() {
         super();
@@ -27,6 +28,10 @@ public abstract class ViewModelController extends Controller implements Lifecycl
     }
 
     public ViewModelProvider viewModelProvider(ViewModelProvider.NewInstanceFactory factory) {
+        return new ViewModelProvider(viewModelStore, factory);
+    }
+
+    public ViewModelProvider viewModelProvider(ViewModelProvider.Factory factory) {
         return new ViewModelProvider(viewModelStore, factory);
     }
 
