@@ -28,6 +28,9 @@ class MyViewModelController : ViewModelController() {
 
         // 2. Obtain your ViewModel using the viewModelProvider() method
         val viewModel = viewModelProvider().get(MyViewModel::class.java)
+        
+        // 2.1 You can also provide a factory to viewModelProvider
+        // val viewModel = viewModelProvider(factory).get(MyViewModel::class.java)
 
         // 3. Observe your LiveData
         viewModel.getLiveData().observe(this, Observer<String> {
@@ -62,7 +65,7 @@ Step 2. Add the dependency
 
 ```
 dependencies {
-    implementation "com.github.miquelbeltran:conductor-viewmodel:1.0.2"
+    implementation "com.github.miquelbeltran:conductor-viewmodel:1.0.3"
 }
 ```
 
