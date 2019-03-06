@@ -71,28 +71,44 @@ dependencies {
 
 ## FAQ
 
-- When is the LiveData observer detached?
+#### When is the LiveData observer detached?
 
 The LiveData observer will be removed (detached) after onDestroyView is called.
 You don't need to remove the observer manually
 
-- When should I start observing my LiveData?
+#### When should I start observing my LiveData?
 
 Call to liveData.observe() on the onCreateView method.
 
-- How can I provide a ViewModel factory?
+#### How can I provide a ViewModel factory?
 
 Call `viewModelProvider` and pass your factory as the first parameter.
 
-- Are there any samples?
+```kotlin
+val viewModel = viewModelProvider(factory).get(MyViewModel::class.java)
+```
+
+#### How can I access to the ViewModel of the parent Controller?
+
+Cast the `parentController` as `ViewModelController`, then access the same
+`ViewModelProvider` using `viewModelProvider()`, 
+that should give you access to the same `ViewModel` instance.
+
+```kotlin
+val viewModelFromParent = (parentController as ViewModelController)
+      .viewModelProvider()
+      .get(HomeViewModel::class.java)
+```
+
+#### Are there any samples?
 
 A sample project is included in the `app` module.
 
-- Why there are no tests?
+#### Why there are no tests?
 
 I will add Espresso tests in the future to verify that lifecycle events happen correctly.
 
-- Why is the ON_DESTROY event in onDestroyView?
+#### Why is the ON_DESTROY event in onDestroyView?
 
 In order to remove the observers from the LiveData when the view is destroyed.
 
