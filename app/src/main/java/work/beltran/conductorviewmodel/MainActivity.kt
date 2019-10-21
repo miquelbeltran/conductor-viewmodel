@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         router = Conductor.attachRouter(this, controller_container, savedInstanceState)
 
         if (!router.hasRootController()) {
-            router.setRoot(RouterTransaction.with(MyViewModelController()))
+            router.setRoot(RouterTransaction.with(MyViewModelController(this)))
         }
     }
 }
