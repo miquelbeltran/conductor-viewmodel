@@ -26,10 +26,6 @@ public abstract class ViewModelController extends Controller implements Lifecycl
         return viewModelProvider(new ViewModelProvider.AndroidViewModelFactory(getActivity().getApplication()));
     }
 
-    public ViewModelProvider viewModelProvider(ViewModelProvider.NewInstanceFactory factory) {
-        return new ViewModelProvider(viewModelStore, factory);
-    }
-
     public ViewModelProvider viewModelProvider(ViewModelProvider.Factory factory) {
         return new ViewModelProvider(viewModelStore, factory);
     }
