@@ -10,21 +10,13 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.controller_viewmodel.view.*
 
-class MyViewModelController() : ViewModelController() {
-
-    private lateinit var fragmentActivity: FragmentActivity
-
-    constructor(fragmentActivity: FragmentActivity) : this() {
-        this.fragmentActivity = fragmentActivity
-    }
+class MyViewModelController : ViewModelController() {
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
         val view = inflater.inflate(R.layout.controller_viewmodel, container, false)
 
-        val viewModel: MyViewModel by lazy {
-            ViewModelProviders.of(fragmentActivity, MyViewModelFactory()).get(MyViewModel::class.java)
-        }
+        val viewModel = viewModelProvider(MyViewModelFactory()).get(MyViewModel::class.java)
 
         // LiveData has no observers even after a configuration change
         Log.d(TAG, "hasObservers should be false: ${viewModel.getLiveData().hasObservers()}")
