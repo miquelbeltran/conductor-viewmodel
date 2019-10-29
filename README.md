@@ -1,3 +1,15 @@
+**NOTICE**
+
+The library has been archived. I can't provide support anymore as I no longer use Conductor and instead I use [Navigation Component](https://developer.android.com/guide/navigation/) on my projects.
+
+You can still use the library as it is, but I won't be adding new features or reviewing PRs from now on.
+
+Feel free to fork and do any changes or continue supporting it by yourself, but please keep the license and copyright notices.
+
+_Miguel, author of the library._
+
+---
+
 # ViewModel support for Conductor
 
 This library adds support for the ViewModel from Architecture Components
